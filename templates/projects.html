@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block title %}Projects - Saad Siddique{% endblock %}
+
+{% block content %}
+<section class="content-section">
+    <div class="container">
+        <h1>Projects & Portfolio</h1>
+        <p>Here are some of the key projects I've worked on, showcasing my technical skills and problem-solving abilities.</p>
+
+        <!-- ITS CA1 Project -->
+        <div class="project-card">
+            <h3>ITS CA1 - Information Technology Systems Project</h3>
+            
+            <div class="pdf-viewer-section">
+                <h4>Project Document</h4>
+                <div class="pdf-container">
+                    <iframe 
+                        src="{{ url_for('static', filename='ITS-CA1.pdf') }}#toolbar=1&navpanes=1&scrollbar=1" 
+                        width="100%" 
+                        height="600px"
+                        title="ITS CA1 Project PDF"
+                        class="pdf-viewer">
+                        <p>Your browser does not support PDFs. <a href="{{ url_for('static', filename='ITS-CA1.pdf') }}" target="_blank">Click here to download the PDF</a>.</p>
+                    </iframe>
+                </div>
+            </div>
+            
+            <p><strong>Description:</strong> A comprehensive Information Technology Systems project focusing on system analysis, design, and implementation. This project demonstrates my understanding of IT infrastructure, system architecture, and technical problem-solving methodologies.</p>
+            <p><strong>Technologies Used:</strong> System Analysis, Database Design, Network Architecture, Documentation</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Comprehensive system analysis and requirements gathering</li>
+                <li>Database design and normalization</li>
+                <li>Network architecture planning</li>
+                <li>Technical documentation and specifications</li>
+                <li>Implementation strategies and testing protocols</li>
+            </ul>
+            <div class="project-links">
+                <a href="{{ url_for('static', filename='ITS-CA1.pdf') }}" target="_blank">Download PDF</a>
+            </div>
+        </div>
+
+        <!-- Team 20 Helios Case Project -->
+        <div class="project-card">
+            <h3>Team 20 - Helios Case Study</h3>
+            
+            <div class="pdf-viewer-section">
+                <h4>Case Study Document</h4>
+                <div class="pdf-container">
+                    <iframe 
+                        src="{{ url_for('static', filename='Helios-Case.pdf') }}#toolbar=1&navpanes=1&scrollbar=1" 
+                        width="100%" 
+                        height="600px"
+                        title="Team 20 Helios Case Study PDF"
+                        class="pdf-viewer">
+                        <p>Your browser does not support PDFs. <a href="{{ url_for('static', filename='Helios-Case.pdf') }}" target="_blank">Click here to download the PDF</a>.</p>
+                    </iframe>
+                </div>
+            </div>
+            
+            <p><strong>Description:</strong> A collaborative case study project analyzing the Helios case, demonstrating team leadership, strategic analysis, and business problem-solving skills. This project showcases my ability to work in teams and tackle complex business challenges.</p>
+            <p><strong>Technologies Used:</strong> Business Analysis, Strategic Planning, Team Collaboration, Case Study Methodology</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Strategic business analysis and evaluation</li>
+                <li>Team collaboration and leadership</li>
+                <li>Problem identification and solution development</li>
+                <li>Comprehensive case study documentation</li>
+                <li>Presentation and communication skills</li>
+            </ul>
+            <div class="project-links">
+                <a href="{{ url_for('static', filename='Helios-Case.pdf') }}" target="_blank">Download PDF</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Saad Siddique{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container">
+        <h1>Welcome to My Digital Space</h1>
+        <p>I'm Saad Siddique, a passionate professional dedicated to excellence in technology and innovation. This website serves as my digital resume and portfolio, showcasing my journey, skills, and achievements.</p>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container">
+        <h2>About This Site</h2>
+        <div class="grid grid-2">
+            <div class="card">
+                <h3>Professional Profile</h3>
+                <p>Explore my professional background, education, and career journey. Learn about my expertise and the value I bring to every project.</p>
+                <a href="{{ url_for('about') }}" class="btn">Learn More</a>
+            </div>
+            <div class="card">
+                <h3>Resume & Experience</h3>
+                <p>View my detailed resume with comprehensive information about my education, work experience, skills, and professional achievements.</p>
+                <a href="{{ url_for('resume') }}" class="btn">View Resume</a>
+            </div>
+            <div class="card">
+                <h3>Projects & Portfolio</h3>
+                <p>Discover the projects I've worked on, including detailed descriptions, technologies used, and links to live demonstrations.</p>
+                <a href="{{ url_for('projects') }}" class="btn">View Projects</a>
+            </div>
+            <div class="card">
+                <h3>Get In Touch</h3>
+                <p>Ready to connect? Reach out through my contact form or connect with me on professional networks. I'm always open to new opportunities.</p>
+                <a href="{{ url_for('contact') }}" class="btn">Contact Me</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container">
+        <h2>Quick Highlights</h2>
+        <div class="grid grid-3">
+            <div class="card">
+                <h3>Consulting Skills</h3>
+                <p>Proficient in creating efficient and scalable solutions.</p>
+            </div>
+            <div class="card">
+                <h3>Problem Solving</h3>
+                <p>Analytical thinker with a proven track record of identifying challenges and implementing effective solutions.</p>
+            </div>
+            <div class="card">
+                <h3>Continuous Learning</h3>
+                <p>Committed to staying current with industry trends and continuously expanding my skill set.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block title %}Contact - Saad Siddique{% endblock %}
+
+{% block content %}
+<section class="content-section">
+    <div class="container">
+        <h1>Get In Touch</h1>
+        <p>I'm always interested in new opportunities and collaborations. Feel free to reach out through any of the channels below or use the contact form.</p>
+
+        <div class="contact-info">
+            <div class="contact-item">
+                <h3>Email</h3>
+                <p><a href="mailto:saad.siddique@email.com">saad.siddique@email.com</a></p>
+                <p>I typically respond within 24 hours</p>
+            </div>
+            
+            <div class="contact-item">
+                <h3>LinkedIn</h3>
+                <p><a href="https://www.linkedin.com/in/saadhsiddique/" target="_blank">linkedin.com/in/saadhsiddique</a></p>
+                <p>Connect with me professionally</p>
+            </div>
+            
+            <div class="contact-item">
+                <h3>GitHub</h3>
+                <p><a href="https://github.com/saadhsiddique" target="_blank">github.com/saadhsiddique</a></p>
+                <p>View my code and projects</p>
+            </div>
+        </div>
+
+        <div class="contact-form-section">
+            <h2>Send Me a Message</h2>
+            <p>Use the form below to send me a direct message. All fields are required.</p>
+            
+            <form action="{{ url_for('contact') }}" method="POST" class="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="first_name">First Name *</label>
+                    <input type="text" id="first_name" name="first_name" required minlength="2" maxlength="50">
+                    <div class="error-message">Please enter your first name (minimum 2 characters)</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="last_name">Last Name *</label>
+                    <input type="text" id="last_name" name="last_name" required minlength="2" maxlength="50">
+                    <div class="error-message">Please enter your last name (minimum 2 characters)</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                    <div class="error-message">Please enter a valid email address</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required minlength="10" maxlength="1000" rows="6" placeholder="Please enter your message here..."></textarea>
+                    <div class="error-message">Please enter a message (minimum 10 characters)</div>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn">Send Message</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="additional-info">
+            <h2>What to Expect</h2>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>Response Time</h3>
+                    <p>I typically respond to all inquiries within 24 hours during business days. For urgent matters, please mention it in your message.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Types of Inquiries</h3>
+                    <p>I'm open to discussing job opportunities, freelance projects, collaboration ideas, technical questions, and general networking.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+// Client-side form validation
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('.contact-form');
+    const message = document.getElementById('message');
+    
+    // Real-time message validation
+    message.addEventListener('input', function() {
+        if (message.value.length < 10) {
+            message.setCustomValidity('Message must be at least 10 characters long');
+        } else if (message.value.length > 1000) {
+            message.setCustomValidity('Message must be less than 1000 characters');
+        } else {
+            message.setCustomValidity('');
+        }
+    });
+    
+    // Form submission validation
+    form.addEventListener('submit', function(e) {
+        if (!form.checkValidity()) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        
+        form.classList.add('was-validated');
+    });
+});
+</script>
+{% endblock %}
