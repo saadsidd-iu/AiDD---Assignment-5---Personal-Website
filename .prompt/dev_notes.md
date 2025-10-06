@@ -1,19 +1,36 @@
+# Development Notes
 
+## Prompt 1: Create a HTML/CSS website using python's Flask framework
 
-**Prompt1:** Create a HTML/CSS website using python's Flask framework. It should include the following pages. Your site should be a multi-page website with consistent navigation.
-- Homepage (index.html) - Title, header, and a short introduction about yourself. Navigation links to other sections (About Me, Resume, Projects, Contact).
-- About Me (about.html) - A detailed biography: background, interests, and goals. A photo of yourself stored in an /images subdirectory.
-- Resume (resume.html) - Include your resume or CV with sections like education, experience, skills, and achievements. Embed as formatted HTML, PDF, or an image.
-- Projects (projects.html) - Showcase at least two projects. Include descriptions, screenshots/images, and links to live demos or repositories.
-- Contact (contact.html) - Provide contact info (email, LinkedIn, GitHub). Include a contact form (see Step 4)
+**Exact Prompt:** "Prompt 1: Create a HTML/CSS website using python's Flask framework. It should include the following pages. Your site should be a multi-page website with consistent navigation.
+Homepage (index.html)
+• Title, header, and a short introduction about yourself.
+• Navigation links to other sections (About Me, Resume, Projects, Contact).
+About Me (about.html)
+• A detailed biography: background, interests, and goals.
+• A photo of yourself stored in an /images subdirectory.
+Resume (resume.html)
+• Include your resume or CV with sections like education, experience, skills, and achievements.
+• Embed as formatted HTML, PDF, or an image.
+Projects (projects.html)
+• Showcase at least two projects.
+• Include descriptions, screenshots/images, and links to live demos or repositories.
+Contact (contact.html)
+• Provide contact info (email, LinkedIn, GitHub).
+• Include a contact form (see Step 4)
 
-Create a separate CSS fill linked from each HTML page. Ensure consistency with fonts, colors and layouts across pages. Use semantic HTML for structure.
+Create a separate CSS fill linked from each HTML page. ENsure sonsinteyc with fonts, colors and layouts across pages. Use semantic HTML for structure.
 
-Add a form on the contact html page. Fields: - First Name (required) - Last Name (required) - Email Address (required, valid format) - Password (required, min 8 characters) - Confirm Password (required, must match Password) - Use attributes: required, type, pattern, minlength. - Show clear error messages (using HTML or minimal JavaScript). - Redirect to a Thank You page (thankyou.html) after submission. - Accessibility requirement: All inputs must have labels connected with for and id. Add alt text for any images
+Add a form on the conctact html page. Fields: - First Name (required) - Last Name (required) - Email
+Address (required, valid format) - Password (required, min 8 characters) - Confirm Password (required,
+must match Password) - Use attributes: required, type, pattern, minlength. - Show clear error messages
+(using HTML or minimal JavaScript). - Redirect to a Thank You page (thankyou.html) after submission. -
+Accessibility requirement: All inputs must have labels connected with for and id. Add alt text for any
+images
 
-Record all prompts i enter in the chat in the .prompt/dev_notes.md file. record the prompt, and summarize the output, and note whether i accepted or rejected the output. 
+Record all prompys i enter in the chat in the .prompt/dev_notes.md file. record the prompt, and summarize the output, and noe whether i accepted or rejected the output. 
 
-create the website to be ran locally in a browser. Look towards the NYT website for an idea of the tiles I would want. Please see the Files & Inspiration folder for a link to the nyt website for design inspiration, find some 4k free images to add to mine. my resume, and a link to my linkedin page to get my headshot and to craft a short bio.
+create the website ton be ran locally in a browser. Look towards the NYT website for an idea of the tiles I wuold want. Please see te FIles & Inspiration dolfer for a link ot the nyt webstie fro design inspiratin, find some 4k free images to add to mine. my resume, and a link to my linkedin page to get my headshot and to craft a short bio."
 
 **Summary of Output:**
 Created a complete Flask-based personal website with the following components:
@@ -64,9 +81,9 @@ Created a complete Flask-based personal website with the following components:
 
 ## Update 1: PDF Viewer and Simplified Contact Form
 
-**Changes Requested:**
-1. Create a PDF viewer for the resume page instead of parsing text and having static text
-2. Simplify the contact form to only include: First Name, Last Name, Email, and Message (remove password fields)
+**Exact Prompt:** "That was great! this looks so good! I will give you a list of changes, so please change them! please create a pdf viewer for my resume, and embid it thre instead of parsing text and havind static text.
+
+in the contact page, the form should be first name, last name, email, message, then send message. no need for password. delete that part. just first name, lat name, email, and message."
 
 **Summary of Changes Made:**
 
@@ -95,9 +112,9 @@ Created a complete Flask-based personal website with the following components:
 
 ## Update 2: PDF Path Fix
 
-**Issue:** Resume PDF was not displaying in the PDF viewer due to incorrect file path.
+**Exact Prompt:** "Everything works, except for the resume. the resume is in the files and inspiration folder. please use that file and siaply it in the pdf viewer."
 
-**Problem:** The path `../Files & Inspiration/Siddique_Saad_Resume.pdf` was trying to access a file outside the Flask static directory, which Flask cannot serve directly.
+**Problem:** Resume PDF was not displaying in the PDF viewer due to incorrect file path.
 
 **Solution:**
 1. Copied the PDF file from "Files & Inspiration" folder to the "static" folder
@@ -112,12 +129,9 @@ Created a complete Flask-based personal website with the following components:
 
 ## Update 3: Thank You Page and Projects Section Overhaul
 
-**Changes Requested:**
-1. Create a simple thank you page with navigation bar and "Back to Homepage" button
-2. Update projects section to show only two PDF projects (ITS CA1 and Team 20 Helios)
-3. Use PDF viewers for both projects (same as resume page)
-4. Remove additional projects and open source contributions sections
-5. Update descriptions and key features for the two projects
+**Exact Prompt:** "create a tahnk you page after submitting the contact form. a simple thank you with the navigation bar teh the top and a button saying back to hompeage.
+
+in the files and inspiration folder are two new files. one called ITS CA1, and the other tEAM 20 HELIOS. Those ifles should be shown in the prjects section in teh same type f pdf viewwer as on the resume page. also update the description,  key features for them/ remove any extra projects beyonf those two in teh file, and remove additonal pkects section, and opne ousrce contriubtions section"
 
 **Summary of Changes Made:**
 
@@ -158,7 +172,7 @@ Created a complete Flask-based personal website with the following components:
 
 ## Update 4: CSS Cleanup - Remove Inline Styles
 
-**Issue:** Multiple HTML templates contained inline CSS styles that should be moved to the main stylesheet for better organization and maintainability.
+**Exact Prompt:** "make sure that there is not any in textr css. all css should be in the style.css file"
 
 **Changes Made:**
 1. **Removed all inline CSS from HTML templates:**
@@ -193,3 +207,57 @@ Created a complete Flask-based personal website with the following components:
 - `static/css/style.css` - Added all styles with proper organization
 
 **Status: COMPLETED** - All inline CSS removed and moved to stylesheet
+
+## Update 5: GitHub Repository Setup
+
+**Exact Prompt:** "can you push this to a github repositrry"
+
+**Summary of Changes Made:**
+1. **Git Repository Setup:**
+   - Initialized Git repository in project directory
+   - Created .gitignore file to exclude unnecessary files
+   - Added all files to Git and made initial commit
+   - Connected local repository to GitHub
+
+2. **GitHub Integration:**
+   - Created GitHub repository: `https://github.com/saadsidd-iu/AiDD---Assignment-5---Personal-Website.git`
+   - Pushed all code to GitHub main branch
+   - Set up proper Git workflow for future updates
+
+**Status: COMPLETED** - Code successfully pushed to GitHub
+
+## Update 6: GitHub Link on Homepage
+
+**Exact Prompt:** "add this on the homepage Include a link to your GitHub Repo in your HTML website submitted to Canvas"
+
+**Summary of Changes Made:**
+1. **Homepage GitHub Section:**
+   - Added new section titled "Source Code & Repository"
+   - Included descriptive text about the website's technology stack
+   - Added professional GitHub button with official GitHub icon
+   - Direct link to repository: `https://github.com/saadsidd-iu/AiDD---Assignment-5---Personal-Website`
+
+2. **Professional Styling:**
+   - GitHub brand colors (#24292e)
+   - Hover effects for better user experience
+   - Responsive design for all devices
+   - Opens in new tab for better navigation
+
+**Files Updated:**
+- `templates/index.html` - Added GitHub section
+- `static/css/style.css` - Added GitHub button styling
+
+**Status: COMPLETED** - GitHub link added to homepage
+
+## Update 7: Dev Notes Update
+
+**Exact Prompt:** "in the dev notes, can you redo to tit to include my exact prmopts tha ti typed here?"
+
+**Summary of Changes Made:**
+1. **Updated dev_notes.md:**
+   - Replaced all paraphrased prompts with exact user prompts
+   - Preserved all typos and formatting as originally typed
+   - Maintained all summaries and status updates
+   - Added new sections for GitHub setup and homepage link
+
+**Status: COMPLETED** - Dev notes updated with exact prompts
